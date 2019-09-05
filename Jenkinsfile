@@ -10,8 +10,12 @@ pipeline {
     stages {
 
         stage('Build') {
-            sh 'npm config set proxy http://10.10.5.18:8080'
-            sh 'npm install'
+
+            steps {
+                sh 'npm config set proxy http://10.10.5.18:8080'
+                sh 'npm install'
+            }
+            
         }
 
     }
